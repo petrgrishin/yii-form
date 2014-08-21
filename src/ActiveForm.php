@@ -16,10 +16,11 @@ class ActiveForm extends BaseWidget {
     public $method = 'post';
 
     public function init(){
-        echo CHtml::beginForm($this->action, $this->method, array('id' => $this->formId = $this->getView()->getUniqueIdentifier('form')));
+        echo CHtml::beginForm($this->action, $this->method, array('id' => $this->formId = 'oeiorie'));
     }
 
     public function run() {
         echo CHtml::endForm();
+        $this->render('form');
     }
 }
