@@ -10,17 +10,28 @@ use CHtml;
 use PetrGrishin\Widget\BaseWidget;
 
 class ActiveForm extends BaseWidget {
-    protected $formId;
-
     public $action;
     public $method = 'post';
+    public $class = '';
 
-    public function init(){
-        echo CHtml::beginForm($this->action, $this->method, array('id' => $this->formId = 'oeiorie'));
+    public function init() {
+        ob_start();
+    }
+
+    public function textField($name, $value = null) {
+        echo CHtml::textField($name, $value, array('class' => 'form-control'));
+    }
+
+    public function passwordField($name, $value = null) {
+        echo CHtml::passwordField($name, $value, array('class' => 'form-control'));
     }
 
     public function run() {
-        echo CHtml::endForm();
-        $this->render('form');
+        $this->render('form', array(
+            'action' => $this->action,
+            'method' => $this->method,
+            'class' => $this->class,
+            'content' => ob_get_clean(),
+        ));
     }
 }
