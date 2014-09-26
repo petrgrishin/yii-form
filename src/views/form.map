@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "form.js",
+  "sourceRoot": "",
+  "sources": [
+    "form.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,GAAG,CAAC,QAAJ,CAAa,QAAb,EAAuB,SAAC,MAAD,EAAS,KAAT,EAAgB,OAAhB,GAAA;WAErB;AAAA,MAAA,OAAA,EAAS,SAAA,GAAA,CAAT;AAAA,MAEA,MAAA,EAAQ,SAAA,GAAA,CAFR;MAFqB;EAAA,CAAvB,CAAA,CAAA;AAAA"
+}
